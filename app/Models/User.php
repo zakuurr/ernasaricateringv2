@@ -57,4 +57,9 @@ public function level()
     return $this->belongsTo(Level::class, 'id_level');
 }
 
+public function pesanans()
+    {
+        return $this->hasMany(Pesanan::class, 'user_id');
+    }
+
 }

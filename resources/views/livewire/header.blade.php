@@ -4,7 +4,7 @@
         <div class="row align-items-center">
           <div class="col-6 col-md-4 order-2 order-md-1 site-search-icon text-left">
             <div class="site-logo">
-                <img src="frontend/images/logoerna.png" class="img-fluid" style="width: 30%">
+                <img src="{{ asset('')}}frontend/images/logoerna.png" class="img-fluid" style="width: 30%">
               </div>
           </div>
 
@@ -17,18 +17,31 @@
           <div class="col-6 col-md-4 order-3 order-md-3 text-right">
             <div class="site-top-icons">
               <ul>
-                <li><a href="#"><span class="icon icon-person"></span></a></li>
+                <li><a href="{{route('login')}}"><span class="icon icon-person"></span></a></li>
                 <li><a href="#"><span class="icon icon-heart-o"></span></a></li>
                 <li>
                   <a href="cart.html" class="site-cart">
                     <span class="icon icon-shopping_cart"></span>
                     <span class="count">2</span>
                   </a>
+
+                </li>
+                <li>
+                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                  document.getElementById('logout-form').submit();">
+ {{ __('Logout') }}
+</a>
+
+<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+ @csrf
+</form>
                 </li>
                 <li class="d-inline-block d-md-none ml-md-0"><a href="#" class="site-menu-toggle js-menu-toggle"><span class="icon-menu"></span></a></li>
               </ul>
             </div>
+
           </div>
+
 
         </div>
       </div>
@@ -40,7 +53,7 @@
             <a href="{{url('/')}}">Home</a>
           </li>
           <li class="">
-            <a href="about.html">Tentang Kami</a>
+            <a href="{{url('/about')}}">Tentang Kami</a>
 
           </li>
           <li><a href="{{url('/list-menu')}}">Menu</a></li>

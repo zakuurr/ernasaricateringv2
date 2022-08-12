@@ -14,8 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Frontend
-Route::get('/', \App\Http\Livewire\Homepage::class);
+Route::get('/', \App\Http\Livewire\Homepage::class)->name('home');
 Route::get('/list-menu', \App\Http\Livewire\Menu::class);
+Route::get('/about', \App\Http\Livewire\About::class);
+Route::get('/list-menu/{id}', \App\Http\Livewire\MenuDetail::class)->name('menu.detail');
 
 //backend
 Route::get('/backend-page', [App\Http\Controllers\BackendController::class, 'index'])->name('dashboard');

@@ -16,8 +16,8 @@ class Kategori extends Model
         'foto',
         'id_kategori'
     ];
-    public function menu()
+    public function menus()
     {
-        return $this->hasOne(Menu::class, 'id_kategori');
+        return $this->hasMany(Menu::class, 'id_kategori');
     }
 }
