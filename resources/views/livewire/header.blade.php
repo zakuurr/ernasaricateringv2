@@ -18,11 +18,12 @@
             <div class="site-top-icons">
               <ul>
                 <li><a href="{{route('login')}}"><span class="icon icon-person"></span></a></li>
-                <li><a href="#"><span class="icon icon-heart-o"></span></a></li>
                 <li>
-                  <a href="cart.html" class="site-cart">
+                  <a href="{{ route('keranjang')}}" class="site-cart">
                     <span class="icon icon-shopping_cart"></span>
-                    <span class="count">2</span>
+                    @if($jumlah_pesanan !== 0)
+                    <span class="count">{{$jumlah_pesanan}}</span>
+                    @endif
                   </a>
 
                 </li>

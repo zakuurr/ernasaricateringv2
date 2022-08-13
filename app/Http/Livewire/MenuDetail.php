@@ -63,6 +63,8 @@ public function masukanKeranjang(){
 'jumlah_pesanan' => $this->jumlah_pesanan,
 'total_harga' => $total_harga
         ]);
+
+        $this->emit('masukKeranjang');
         session()->flash('message','Sukses Masuk Ke Keranjang');
 
         return redirect()->back();
