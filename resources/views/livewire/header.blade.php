@@ -17,6 +17,7 @@
           <div class="col-6 col-md-4 order-3 order-md-3 text-right">
             <div class="site-top-icons">
               <ul>
+                @if (Auth::user()!==null)
                 <li><a href="{{route('login')}}"><span class="icon icon-person"></span></a></li>
                 <li>
                   <a href="{{ route('keranjang')}}" class="site-cart">
@@ -27,6 +28,8 @@
                   </a>
 
                 </li>
+                @endif
+               
                 <li>
                   @if (Auth::user()!==null)
                   <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
