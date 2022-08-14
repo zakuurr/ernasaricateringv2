@@ -30,7 +30,6 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Scripts -->
-    @vite(['resources/js/app.js'])
     @livewireScripts
     <style>
         a:hover{
@@ -53,19 +52,19 @@
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 
-<script src="https://cdn.jsdelivr.net/gh/livewire/turbolinks@v0.1.x/dist/livewire-turbolinks.js" data-turbolinks-eval="false" data-turbo-eval="false"></script>
+{{-- <script src="https://cdn.jsdelivr.net/gh/livewire/turbolinks@v0.1.x/dist/livewire-turbolinks.js" data-turbolinks-eval="false" data-turbo-eval="false"></script>
 
-<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.x/dist/alpine.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.x/dist/alpine.min.js" defer></script> --}}
 
-<script src="{{ asset('/')}}frontend/js/jquery-3.3.1.min.js" defer></script>
-<script src="{{ asset('/')}}frontend/js/jquery-ui.js" defer></script>
-<script src="{{ asset('/')}}frontend/js/popper.min.js" defer></script>
-<script src="{{ asset('/')}}frontend/js/bootstrap.min.js" defer></script>
-<script src="{{ asset('/')}}frontend/js/owl.carousel.min.js" defer></script>
-<script src="{{ asset('/')}}frontend/js/jquery.magnific-popup.min.js" defer></script>
-<script src="{{ asset('/')}}frontend/js/aos.js" defer></script>
+<script src="{{ asset('/')}}frontend/js/jquery-3.3.1.min.js"></script>
+<script src="{{ asset('/')}}frontend/js/jquery-ui.js"></script>
+<script src="{{ asset('/')}}frontend/js/popper.min.js"></script>
+<script src="{{ asset('/')}}frontend/js/bootstrap.min.js"></script>
+<script src="{{ asset('/')}}frontend/js/owl.carousel.min.js"></script>
+<script src="{{ asset('/')}}frontend/js/jquery.magnific-popup.min.js"></script>
+<script src="{{ asset('/')}}frontend/js/aos.js"></script>
 
-<script src="{{ asset('/')}}frontend/js/main.js" defer></script>
+<script src="{{ asset('/')}}frontend/js/main.js"></script>
 
 </body>
 </html>
