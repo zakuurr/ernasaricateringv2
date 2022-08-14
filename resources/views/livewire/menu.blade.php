@@ -67,7 +67,7 @@
         </div>
       </div>
 
-      <div class="row">
+      {{-- <div class="row">
         <div class="col-md-12">
           <div class="site-section site-blocks-2">
               <div class="row justify-content-center text-center mb-5">
@@ -113,7 +113,7 @@
 
           </div>
         </div>
-      </div>
+      </div> --}}
 
     </div>
   </div>
