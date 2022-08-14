@@ -23,17 +23,17 @@
             <span class="icon-truck" style="color: #d49701"></span>
           </div>
           <div class="text">
-            <h2 class="text-uppercase">Free Shipping</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at iaculis quam. Integer accumsan tincidunt fringilla.</p>
+            <h2 class="text-uppercase">Bebas Ongkir</h2>
+            <p>Free Ongkir ke seluruh pulau Jawa.</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-4 d-lg-flex mb-4 mb-lg-0 pl-4" data-aos="fade-up" data-aos-delay="100">
           <div class="icon mr-4 align-self-start">
-            <span class="icon-refresh2" style="color: #d49701"></span>
+            <span class="icon-dollar" style="color: #d49701"></span>
           </div>
           <div class="text">
-            <h2 class="text-uppercase">Free Returns</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at iaculis quam. Integer accumsan tincidunt fringilla.</p>
+            <h2 class="text-uppercase">Pembayaran Mudah</h2>
+            <p>Dapat dilakukan secara tunai ataupun non tunai.</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-4 d-lg-flex mb-4 mb-lg-0 pl-4" data-aos="fade-up" data-aos-delay="200">
@@ -41,8 +41,8 @@
             <span class="icon-help" style="color: #d49701"></span>
           </div>
           <div class="text">
-            <h2 class="text-uppercase">Customer Support</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at iaculis quam. Integer accumsan tincidunt fringilla.</p>
+            <h2 class="text-uppercase">Dukungan Pelanggan</h2>
+            <p>Mendapat dukungan dari banyak pelanggan.</p>
           </div>
         </div>
       </div>
@@ -93,7 +93,7 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-7 site-section-heading text-center pt-4">
-          <h2>Featured Menu</h2>
+          <h2>Menu Unggulan</h2>
         </div>
       </div>
       <div class="row">
@@ -216,11 +216,12 @@
         </div>
         <div class="col-md-6 col-lg-3">
           <div class="block-5 mb-5">
-            <h3 class="footer-heading mb-4">Contact Info</h3>
+            <h3 class="footer-heading mb-4">Info Kontak</h3>
             <ul class="list-unstyled">
-              <li class="address" >203 Fake St. Mountain View, San Francisco, California, USA</li>
-              <li class="phone"><a href="tel://23923929210">+2 392 3929 210</a></li>
-              <li class="email">emailaddress@domain.com</li>
+              <li class="address" >Jln. Pungkur Loji (Kp. Panday) No.23 RT.02/RW.07 Desa. Cicalengka Kulon
+                Kec. Cicalengkan Kab. Bandung - Jawa Barat 40395</li>
+              <li class="phone"><a href="tel://23923929210">: 022 - 7941817</a></li>
+              <li class="email">ernasarigroup@gmail.com</li>
             </ul>
           </div>
 

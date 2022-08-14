@@ -22,12 +22,18 @@
                       <th class="product-quantity">Jumlah</th>
                       <th class="product-total">Harga</th>
                       <th class="product-total">Total Harga</th>
-                      <th class="product-remove">Remove</th>
+                      <th class="product-remove">Hapus</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <?php $no = 1 ?>
+                    <?php 
+                    $no = 1;
+                    $total = 0;
+                    ?>
                         @forelse ($pesanan_details as $pesanan_detail)
+                        @php
+                            $total = sum($pesanan_detail->total_harga);
+                        @endphp
                         <tr>
                             <td>{{ $no++ }}</td>
                             <td class="product-thumbnail">
@@ -43,6 +49,8 @@
                               <td><strong> Rp. {{number_format($pesanan_detail->total_harga,0,'.','.')}} </strong></td>
                               <td><a href="#" class="btn btn-danger btn-sm">X</a></td>
                             </tr>
+
+
                         @empty
                         <tr>
                             <td colspan="7">Data Kosong</td>
@@ -58,22 +66,22 @@
             <div class="col-md-6">
               <div class="row mb-5">
                 <div class="col-md-6 mb-3 mb-md-0">
-                  <button class="btn btn-primary btn-sm btn-block">Update Cart</button>
+                  <button class="btn btn-primary btn-sm btn-block">Ubah Keranjang</button>
                 </div>
                 <div class="col-md-6">
-                  <button class="btn btn-outline-primary btn-sm btn-block">Continue Shopping</button>
+                  <button class="btn btn-outline-primary btn-sm btn-block">Lanjutkan Belanja</button>
                 </div>
               </div>
               <div class="row">
                 <div class="col-md-12">
-                  <label class="text-black h4" for="coupon">Coupon</label>
-                  <p>Enter your coupon code if you have one.</p>
+                  <label class="text-black h4" for="coupon">Kupon</label>
+                  <p>Masukan kupon jika ada.</p>
                 </div>
                 <div class="col-md-8 mb-3 mb-md-0">
                   <input type="text" class="form-control py-3" id="coupon" placeholder="Coupon Code">
                 </div>
                 <div class="col-md-4">
-                  <button class="btn btn-primary btn-sm">Apply Coupon</button>
+                  <button class="btn btn-primary btn-sm">Pakai</button>
                 </div>
               </div>
             </div>
@@ -82,7 +90,7 @@
                 <div class="col-md-7">
                   <div class="row">
                     <div class="col-md-12 text-right border-bottom mb-5">
-                      <h3 class="text-black h4 text-uppercase">Cart Totals</h3>
+                      <h3 class="text-black h4 text-uppercase">Total Keranjang</h3>
                     </div>
                   </div>
                   <div class="row mb-3">
@@ -90,7 +98,7 @@
                       <span class="text-black">Subtotal</span>
                     </div>
                     <div class="col-md-6 text-right">
-                      <strong class="text-black">$230.00</strong>
+                      <strong class="text-black">{{ number_format($total,0,'.','.') }}</strong>
                     </div>
                   </div>
                   <div class="row mb-5">
@@ -98,13 +106,13 @@
                       <span class="text-black">Total</span>
                     </div>
                     <div class="col-md-6 text-right">
-                      <strong class="text-black">$230.00</strong>
+                      <strong class="text-black">{{ number_format($total,0,'.','.') }}</strong>
                     </div>
                   </div>
 
                   <div class="row">
                     <div class="col-md-12">
-                      <button class="btn btn-primary btn-lg py-3 btn-block" onclick="window.location='checkout.html'">Proceed To Checkout</button>
+                      <button class="btn btn-primary btn-lg py-3 btn-block" onclick="window.location='checkout.html'">Checkout</button>
                     </div>
                   </div>
                 </div>
