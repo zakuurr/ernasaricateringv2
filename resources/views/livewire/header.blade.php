@@ -18,7 +18,7 @@
             <div class="site-top-icons">
               <ul>
                 @if (Auth::user()!==null)
-                <li><a href="{{route('login')}}"><span class="icon icon-person"></span></a></li>
+                {{-- <li><a href="{{route('login')}}"><span class="icon icon-person"></span></a></li> --}}
                 <li>
                   <a href="{{ route('keranjang')}}" class="site-cart">
                     <span class="icon icon-shopping_cart"></span>

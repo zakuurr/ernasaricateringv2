@@ -22,12 +22,18 @@
                       <th class="product-quantity">Jumlah</th>
                       <th class="product-total">Harga</th>
                       <th class="product-total">Total Harga</th>
-                      <th class="product-remove">Remove</th>
+                      <th class="product-remove">Hapus</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <?php $no = 1 ?>
+                    <?php 
+                    $no = 1;
+                    $total = 0;
+                    ?>
                         @forelse ($pesanan_details as $pesanan_detail)
+                        @php
+                            $total = sum($pesanan_detail->total_harga);
+                        @endphp
                         <tr>
                             <td>{{ $no++ }}</td>
                             <td class="product-thumbnail">
@@ -43,6 +49,8 @@
                               <td><strong> Rp. {{number_format($pesanan_detail->total_harga,0,'.','.')}} </strong></td>
                               <td><i class="fa fa-trash text-danger" wire:click="destroy({{$pesanan_detail->id}})"></i></td>
                             </tr>
+
+
                         @empty
                         <tr>
                             <td colspan="7">Data Kosong</td>
@@ -57,9 +65,29 @@
           <div class="row">
             <div class="col-md-6">
               <div class="row mb-5">
+<<<<<<< HEAD
 
                 <div class="col-md-6">
                   <a  href="{{ url('/list-menu')}}" class="btn btn-sm btn-block text-black" style="background-color: #d49701; :color : black">Lanjutkan Belanja</a>
+=======
+                <div class="col-md-6 mb-3 mb-md-0">
+                  <button class="btn btn-primary btn-sm btn-block">Ubah Keranjang</button>
+                </div>
+                <div class="col-md-6">
+                  <button class="btn btn-outline-primary btn-sm btn-block">Lanjutkan Belanja</button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <label class="text-black h4" for="coupon">Kupon</label>
+                  <p>Masukan kupon jika ada.</p>
+                </div>
+                <div class="col-md-8 mb-3 mb-md-0">
+                  <input type="text" class="form-control py-3" id="coupon" placeholder="Coupon Code">
+                </div>
+                <div class="col-md-4">
+                  <button class="btn btn-primary btn-sm">Pakai</button>
+>>>>>>> e6b5eb7c7f1456ba8b0e25fb5a163dbe3de243d5
                 </div>
               </div>
 
@@ -70,7 +98,11 @@
                 <div class="col-md-7">
                   <div class="row">
                     <div class="col-md-12 text-right border-bottom mb-5">
+<<<<<<< HEAD
                       <h3 class="text-black h4 text-uppercase">Total Pesanan</h3>
+=======
+                      <h3 class="text-black h4 text-uppercase">Total Keranjang</h3>
+>>>>>>> e6b5eb7c7f1456ba8b0e25fb5a163dbe3de243d5
                     </div>
                   </div>
                   <div class="row mb-3">
@@ -78,7 +110,11 @@
                       <span class="text-black">Total Harga</span>
                     </div>
                     <div class="col-md-6 text-right">
+<<<<<<< HEAD
                       <strong class="text-black">Rp. {{number_format($pesanan->total_harga,0,'.','.')}}</strong>
+=======
+                      <strong class="text-black">{{ number_format($total,0,'.','.') }}</strong>
+>>>>>>> e6b5eb7c7f1456ba8b0e25fb5a163dbe3de243d5
                     </div>
 
 
@@ -98,13 +134,21 @@
                       <span class="text-black">Total Bayar</span>
                     </div>
                     <div class="col-md-6 text-right">
+<<<<<<< HEAD
                       <strong class="text-black">Rp. {{number_format($pesanan->total_harga,0,'.','.')}}</strong>
+=======
+                      <strong class="text-black">{{ number_format($total,0,'.','.') }}</strong>
+>>>>>>> e6b5eb7c7f1456ba8b0e25fb5a163dbe3de243d5
                     </div>
                   </div>
 
                   <div class="row">
                     <div class="col-md-12">
+<<<<<<< HEAD
                       <a href="{{ route('checkout')}}" class="btn btn-sm text-black" style="background-color: #d49701; :color : black style="color: white">Checkout</a>
+=======
+                      <button class="btn btn-primary btn-lg py-3 btn-block" onclick="window.location='checkout.html'">Checkout</button>
+>>>>>>> e6b5eb7c7f1456ba8b0e25fb5a163dbe3de243d5
                     </div>
                   </div>
                 </div>
