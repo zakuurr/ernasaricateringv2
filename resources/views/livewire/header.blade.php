@@ -27,7 +27,15 @@
                     @endif
                   </a>
 
+
                 </li>
+                <li>
+                    <a href="{{ route('history')}}" class="site-cart">
+History
+                    </a>
+
+
+                  </li>
                 @endif
 
                 <li>
@@ -44,6 +52,8 @@
                   <a class="dropdown-item" href="{{ route('login') }}">
                       {{ __('Login') }}
                       </a>
+
+
                   @endif
 
                 </li>

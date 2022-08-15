@@ -47,8 +47,6 @@ class Checkout extends Component
 
     $this->emit('masukKeranjang');
 
-
-
     return redirect()->route('history')->with('msg', 'Success');
 
     }
