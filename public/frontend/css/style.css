@@ -120,9 +120,7 @@ a {
   border-top: 1px solid #edf0f5 !important; }
 
 .site-footer {
-  padding: 4em 0;
-  background-image: url('footer_background.jpg');
- }
+  padding: 4em 0; }
   .site-footer ul li {
     margin-bottom: 10px; }
     .site-footer ul li a {
@@ -592,11 +590,7 @@ a {
     left: 0;
     font-size: 20px;
     line-height: 1;
-<<<<<<< HEAD
-    color: #d49701 }
-=======
     color: #d49701; }
->>>>>>> e6b5eb7c7f1456ba8b0e25fb5a163dbe3de243d5
   .block-5 ul li.address:before {
     content: "\e8b4"; }
   .block-5 ul li.email:before {
