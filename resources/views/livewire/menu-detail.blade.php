@@ -28,9 +28,7 @@
 
             <div class="input-group mb-3" style="max-width: 120px;">
                 <p style="color: black"> Jumlah Pesanan</p>
-            <input type="number" id="jumlah_pesanan" class="form-control text-center @error('jumlah_pesanan') is-invalid @enderror" wire:model="jumlah_pesanan" value="{{ old('jumlah_pesanan')}}" autocomplete="name" autofocus>
-
-            <
+            <input type="number" id="jumlah_pesanan" class="form-control text-center @error('jumlah_pesanan') is-invalid @enderror" wire:model="jumlah_pesanan" value="1 {{ old('jumlah_pesanan')}}">
           </div>
 
             @error('jumlah_pesanan')

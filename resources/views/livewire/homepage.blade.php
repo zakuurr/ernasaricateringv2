@@ -1,3 +1,4 @@
+<div>
 <div class="site-blocks-cover" style="background-image: url(frontend/images/banner.jpg); background-size: cover;background-attachment: fixed; background-position : center top" data-aos="fade">
     <div class="container">
       <div class="row align-items-start align-items-md-center justify-content-end">
@@ -55,7 +56,7 @@
         <div class="col-sm-6 col-md-6 col-lg-4 mb-4 mb-lg-0" data-aos="fade" data-aos-delay="">
           <a class="block-2-item" href="#">
             <figure class="image">
-              <img src="frontend/images/paketpremium.jpg" alt="" class="img-fluid">
+              <img src="{{ asset('')}}frontend/images/paketpremium.jpg" alt="" class="img-fluid">
             </figure>
             <div class="text">
               <span class="text-uppercase">Kategori</span>
@@ -66,7 +67,7 @@
         <div class="col-sm-6 col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="100">
           <a class="block-2-item" href="#">
             <figure class="image">
-              <img src="frontend/images/capcay.jpg" alt="" class="img-fluid">
+              <img src="{{ asset('')}}frontend/images/capcay.jpg" alt="" class="img-fluid">
             </figure>
             <div class="text">
               <span class="text-uppercase">Kategori</span>
@@ -77,7 +78,7 @@
         <div class="col-sm-6 col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="200">
           <a class="block-2-item" href="#">
             <figure class="image">
-              <img src="frontend/images/menuutama.jpg" alt="" class="img-fluid">
+              <img src="{{ asset('')}}frontend/images/menuutama.jpg" alt="" class="img-fluid">
             </figure>
             <div class="text">
               <span class="text-uppercase">Kategori</span>
@@ -93,7 +94,7 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-7 site-section-heading text-center pt-4">
-          <h2>Featured Menu</h2>
+          <h2>Rekomendasi Menu</h2>
         </div>
       </div>
       <div class="row">
@@ -106,7 +107,7 @@
                   <img src="{{ asset('storage/fotomenu/'. $menu->foto) }}" alt="Image placeholder" class="img-fluid">
                 </figure>
                 <div class="block-4-text p-4">
-                  <h3><a href="#">{{$menu->nama_menu}}</a></h3>
+                  <h3><a href="{{ url('list-menu/'.$menu->id)}}">{{$menu->nama_menu}}</a></h3>
                   <p class="mb-0">{{$menu->deskripsi}}</p>
                   <p class="text-primary font-weight-bold">Rp.{{number_format($menu->harga,0,'.','.')}}</p>
                 </div>
@@ -176,14 +177,14 @@
       </div>
       <div class="row align-items-center">
         <div class="col-md-12 col-lg-7 mb-5">
-          <a href="#"><img src="frontend/images/menuutama.jpg" alt="Image placeholder" class="img-fluid rounded"></a>
+          <a href="#"><img src="{{ asset('')}}frontend/images/menuutama.jpg" alt="Image placeholder" class="img-fluid rounded"></a>
         </div>
         <div class="col-md-12 col-lg-5 text-center pl-md-5">
-          <h2><a href="#">Erna Sari Catering</a></h2>
+          <h2><a href="#" style="font-style: italic">OUR TASTE IS HAPPINESS</a></h2>
 
           <p>Menerima antar makanan ke lokasi anda
             untuk lokasi Cicalengka sekitarnya!</p>
-            <a href="#" class="btn btn-sm text-black" style="background-color: #d49701; :color : black">Pesen Sekarang</a>
+            <a href="#" class="btn btn-sm text-black" style="background-color: #d49701; :color : black">Pesan Sekarang</a>
         </div>
       </div>
     </div>
@@ -191,50 +192,31 @@
 
   <footer class="site-footer border-top">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-6 mb-lg-0">
-          <div class="row">
-            <div class="col-md-12">
-              <h3 class="footer-heading mb-4">Navigations</h3>
-            </div>
-            <div class="col-md-6 col-lg-4">
-              <ul class="list-unstyled">
-                <li><a href="#">Sell online</a></li>
-                <li><a href="#">Features</a></li>
-                <li><a href="#">Shopping cart</a></li>
-                <li><a href="#">Store builder</a></li>
-              </ul>
-            </div>
+            <div class="row">
+              <div class="logo-footer col-md-4">
+                <img class="img-fluid" src="{{ asset('')}}frontend/images/logoerna.png" alt="Yellowfitkitchen logo" style="width: 50%"/>
+              </div>
+              <div class="text-footer col-md-4 text-center">
+                <p class="text-white"><span class="fw-bold text-white">© 2022 - ERNA SARI GROUP</span> <br />
+                  All Rights Reserved powered by <a class="fw-bold text-decoration-none" href="/https://yellowfitkitchen.com/">ernasaricatering.com</a><br>
+                  {{-- <div class="fw-bold">
+                    <h3>OUR TASTE IS HAPPINESS </h3>
 
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
-          <h3 class="footer-heading mb-4">Promo</h3>
-          <a href="#" class="block-6">
-            <img src="frontend/images/menuutama.jpg" alt="Image placeholder" class="img-fluid rounded mb-4">
-          </a>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="block-5 mb-5">
-            <h3 class="footer-heading mb-4">Contact Info</h3>
-            <ul class="list-unstyled">
-              <li class="address" >203 Fake St. Mountain View, San Francisco, California, USA</li>
-              <li class="phone"><a href="tel://23923929210">+2 392 3929 210</a></li>
-              <li class="email">emailaddress@domain.com</li>
-            </ul>
-          </div>
-
-        </div>
-      </div>
-      {{-- <div class="row pt-5 mt-5 text-center">
-        <div class="col-md-12">
-          <p>
-          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-          Copyright &copy;<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" class="text-primary">Colorlib</a>
-          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-          </p>
-        </div>
-
-      </div> --}}
+                  </div> --}}
+                </p>
+              </div>
+                    <div class="text-footer col-md-4 text-center">
+                        <p class="text-white"><span class="fw-bold text-white">INFO KONTAK</span> <br />
+                            <div class="block-5 mb-5" style="color: #d49701">
+                                <ul class="list-unstyled" style="color: #d49701">
+                                  <li class="address text-white">Kampung Pungkur Loji No.23 Cicalengka Kulon, Waluya, Kec. Cicalengka, Kabupaten Bandung, Jawa Barat 40395</li>
+                                  <li class="phone text-white"><a class="text-white" href="tel://085222807053">085222807053</a></li>
+                                  {{-- <li class="email text-white">emailaddress@domain.com</li> --}}
+                                </ul>
+                              </div>
+                          </div>
+                        </p>
+                      </div>          </div>
     </div>
   </footer>
+</div>

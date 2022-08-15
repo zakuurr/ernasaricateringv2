@@ -11,22 +11,16 @@ use Livewire\WithPagination;
 class Menu extends Component
 {
 
-    public $search='';
-
-    protected $queryString = ['search'];
+    public $searchTerm;
 
     protected $paginationTheme = 'bootstrap';
 
     public function render()
     {
-        if($this->search)
-        {
-            $menu = BackendMenu::where('nama_menu', 'like', '%'.$this->search.'%')->paginate(6);
-        } else {
-            $menu = BackendMenu::paginate(6);
-        }
+
+        $searchTerm = '%'.$this->searchTerm.'%';
         return view('livewire.menu',[
-            'menus' => $menu,
+            'menus' => BackendMenu::where('nama_menu','LIKE',$searchTerm)->paginate(6),
             'kategoris' => Kategori::all()
         ])->extends('layouts.app')
         ->section('content');

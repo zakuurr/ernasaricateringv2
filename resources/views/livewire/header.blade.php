@@ -29,7 +29,7 @@
 
                 </li>
                 @endif
-               
+
                 <li>
                   @if (Auth::user()!==null)
                   <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
@@ -39,13 +39,13 @@
 
                       <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                       @csrf
-                      </form>  
+                      </form>
                   @else
                   <a class="dropdown-item" href="{{ route('login') }}">
                       {{ __('Login') }}
                       </a>
                   @endif
-                    
+
                 </li>
                 <li class="d-inline-block d-md-none ml-md-0"><a href="#" class="site-menu-toggle js-menu-toggle"><span class="icon-menu"></span></a></li>
               </ul>
@@ -61,13 +61,13 @@
       <div class="container">
         <ul class="site-menu js-clone-nav d-none d-md-block">
           <li class="active">
-            <a href="{{url('/')}}">Home</a>
+            <a href="{{url('/')}}">Beranda</a>
           </li>
           <li class="">
             <a href="{{url('/about')}}">Tentang Kami</a>
 
           </li>
-          <li><a href="{{url('/list-menu')}}">Menu</a></li>
+          <li><a href="{{url('/list-menu')}}">Daftar Menu</a></li>
           <li><a href="contact.html">Kontak Kami</a></li>
         </ul>
       </div>

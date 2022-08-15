@@ -22,6 +22,8 @@ class Header extends Component
             if($pesanan)
             {
                 $this->jumlah = PesananDetail::where('pesanan_id',$pesanan->id)->count();
+            } else{
+                $this-> jumlah = 0;
             }
         }
     }

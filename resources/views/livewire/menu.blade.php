@@ -1,7 +1,8 @@
+<div>
 <div class="bg-light py-3">
     <div class="container">
       <div class="row">
-        <div class="col-md-12 mb-0"><a href="{{url('/')}}">Home</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">List Menu</strong></div>
+        <div class="col-md-12 mb-0"><a href="{{url('/')}}">Beranda</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">Daftar Menu</strong></div>
       </div>
     </div>
   </div>
@@ -10,19 +11,18 @@
     <div class="container">
 
       <div class="row mb-5">
-        <div class="col-md-9 order-2">
 
           <div class="row">
-            <div class="col-md-9">
-              <h2 class="text-black h5">Shop All</h2>
+            <div class="col-md-12">
+              <h2 class="text-black h5">Daftar Menu</h2>
             </div>
-              <div class="col-md-3">
+              {{-- <div class="col-md-3">
                 <div class="input-group mb-3">
 
-                    <input wire:model="search" type="text" class="form-control" placeholder="Search" >
-                    <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-magnifying-glass"></i></i></span>
+                    <input type="text" class="form-control" placeholder="Search" wire:model.debounce.350ms="searchTerm">
+                    <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-magnifying-glass"></i></span>
                   </div>
-              </div>
+              </div> --}}
 
           </div>
           <div class="row mb-5">
@@ -46,25 +46,7 @@
 
         </div>
 
-        <div class="col-md-3 order-1 mb-5 mb-md-0">
-          <div class="border p-4 rounded mb-4">
-            <h3 class="mb-3 h6 text-uppercase text-black d-block">Categories</h3>
-            <ul class="list-unstyled mb-0">
-             @foreach($kategoris as $kategori)
-              <li class="mb-1"><a href="#" class="d-flex"><span>{{$kategori->kategori}}</span></a></li>
-            @endforeach
-            </ul>
-          </div>
-            <div class="mb-4">
 
-            </div>
-
-            <div class="mb-4">
-
-            </div>
-
-          </div>
-        </div>
       </div>
 
       {{-- <div class="row">
@@ -117,3 +99,4 @@
 
     </div>
   </div>
+</div>

@@ -19,6 +19,8 @@ Route::get('/list-menu', \App\Http\Livewire\Menu::class);
 Route::get('/about', \App\Http\Livewire\About::class);
 Route::get('/list-menu/{id}', \App\Http\Livewire\MenuDetail::class)->name('menu.detail');
 Route::get('/keranjang', \App\Http\Livewire\Keranjang::class)->name('keranjang');
+Route::get('/checkout', \App\Http\Livewire\Checkout::class)->name('checkout');
+Route::get('/history', \App\Http\Livewire\History::class)->name('history');
 
 //backend
 Route::get('/backend-page', [App\Http\Controllers\BackendController::class, 'index'])->name('dashboard');
