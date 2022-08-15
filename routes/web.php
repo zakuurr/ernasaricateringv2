@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 // Frontend
 Route::get('/', \App\Http\Livewire\Homepage::class)->name('home');
-Route::get('/list-menu', \App\Http\Livewire\Menu::class);
+Route::get('/list-menu', \App\Http\Livewire\Menu::class)->name('list-menu');
 Route::get('/about', \App\Http\Livewire\About::class);
 Route::get('/list-menu/{id}', \App\Http\Livewire\MenuDetail::class)->name('menu.detail');
 Route::get('/keranjang', \App\Http\Livewire\Keranjang::class)->name('keranjang');
