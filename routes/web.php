@@ -47,3 +47,15 @@ Route::prefix('menu')->group(function () {
     Route::post('/update/{id}', [App\Http\Controllers\Backend\MenuController::class, 'update'])->name('menu.update');
     Route::get('/destroy/{id}', [App\Http\Controllers\Backend\MenuController::class, 'destroy'])->name('menu.destroy');
 });
+
+
+// Pesanan
+// Route::prefix('menu')->middleware('admin', 'auth')->group(function () {
+Route::prefix('pesanan')->group(function () {
+    Route::get('/', [App\Http\Controllers\Backend\PesananController::class, 'index'])->name('pesanan.index');
+    Route::get('/create', [App\Http\Controllers\Backend\PesananController::class, 'create'])->name('pesanan.create');
+    Route::post('/store', [App\Http\Controllers\Backend\PesananController::class, 'store'])->name('pesanan.store');
+    Route::get('/show/{id}', [App\Http\Controllers\Backend\PesananController::class, 'show'])->name('pesanan.show');
+    Route::post('/update/{id}', [App\Http\Controllers\Backend\PesananController::class, 'update'])->name('pesanan.update');
+    Route::get('/destroy/{id}', [App\Http\Controllers\Backend\PesananController::class, 'destroy'])->name('pesanan.destroy');
+});

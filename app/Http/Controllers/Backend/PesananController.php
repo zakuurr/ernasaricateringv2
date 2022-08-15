@@ -3,11 +3,10 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
-use App\Models\Backend\Menu;
 use Illuminate\Http\Request;
-use Gloudemans\Shoppingcart\Facades\Cart;
+use App\Models\Pesanan;
 
-class TransaksiController extends Controller
+class PesananController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +15,9 @@ class TransaksiController extends Controller
      */
     public function index()
     {
-        //
+        $pesanan = Pesanan::all();
+
+        return view('backend/pesanan/index', compact('pesanan'));
     }
 
     /**
@@ -37,7 +38,7 @@ class TransaksiController extends Controller
      */
     public function store(Request $request)
     {
-
+        //
     }
 
     /**
