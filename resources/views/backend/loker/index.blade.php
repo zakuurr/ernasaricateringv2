@@ -106,7 +106,7 @@ confirmButtonText: 'Ya'
 if (result.value) {
     document.location.href = href;
     Swal.fire(
-  'Terhapus!',
+  'Diubah!',
   'Lowongan Pekerjaan sudah tidak tersedia',
   'success'
 )

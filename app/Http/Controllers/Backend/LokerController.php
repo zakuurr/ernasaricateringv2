@@ -124,8 +124,7 @@ class LokerController extends Controller
             'judul'             => $request['judul'],
             'posisi_pekerjaan'  => $request['posisi_pekerjaan'],
             'deskripsi'         => $request['deskripsi'],
-            'status'            => $request['status'],
-            'link_job'            => $request['link_job'],
+            'link_job'          => $request['link_job'],
             'foto'              => $savefoto,
         ]);
 
