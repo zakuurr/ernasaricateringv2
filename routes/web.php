@@ -59,3 +59,16 @@ Route::prefix('pesanan')->group(function () {
     Route::post('/update/{id}', [App\Http\Controllers\Backend\PesananController::class, 'update'])->name('pesanan.update');
     Route::get('/destroy/{id}', [App\Http\Controllers\Backend\PesananController::class, 'destroy'])->name('pesanan.destroy');
 });
+
+
+// Loker
+// Route::prefix('loekr')->middleware('admin', 'auth')->group(function () {
+Route::prefix('loker')->group(function () {
+    Route::get('/', [App\Http\Controllers\Backend\LokerController::class, 'index'])->name('loker.index');
+    Route::get('/create', [App\Http\Controllers\Backend\LokerController::class, 'create'])->name('loker.create');
+    Route::post('/store', [App\Http\Controllers\Backend\LokerController::class, 'store'])->name('loker.store');
+    Route::get('/edit/{id}', [App\Http\Controllers\Backend\LokerController::class, 'edit'])->name('loker.edit');
+    Route::get('/ditempati/{id}', [App\Http\Controllers\Backend\LokerController::class, 'ditempati'])->name('loker.ditempati');
+    Route::post('/update/{id}', [App\Http\Controllers\Backend\LokerController::class, 'update'])->name('loker.update');
+    Route::get('/destroy/{id}', [App\Http\Controllers\Backend\LokerController::class, 'destroy'])->name('loker.destroy');
+});

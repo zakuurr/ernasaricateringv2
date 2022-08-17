@@ -205,6 +205,14 @@
               </p>
             </a>
           </li>
+          <li class="nav-item">
+            <a href="{{ route('loker.index') }}" class="nav-link">
+              <i class="nav-icon fas fa-tasks"></i>
+              <p>
+                Lowongan Pekerjaan
+              </p>
+            </a>
+          </li>
 
         </ul>
       </nav>
