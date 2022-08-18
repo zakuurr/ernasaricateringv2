@@ -35,7 +35,7 @@
               <td>
                 <center>
                   <a class="btn btn-warning" href="{{ route('pesanan.detail', $item->id) }}" ><font color="white"><i class="fa fa-eye"></i> Lihat detail</font></a>
-                  <a class="btn btn-danger tombol-hapus" href=""><i class="fas fa-trash" ></i>Hapus</a>
+                  <a class="btn btn-danger tombol-hapus" href="{{ route('pesanan.destroy', $item->id) }}"><i class="fas fa-trash" ></i>Hapus</a>
                 </center>
               </td>
             </tr>
@@ -59,7 +59,7 @@ const href =$(this).attr('href');
 
 Swal.fire({
 title: 'Apakah anda yakin ?',
-text: "Menu makanan ini akan dihapus",
+text: "Transaksi pesanan ini akan dihapus",
 type: 'warning',
 showCancelButton: true,
 confirmButtonColor: '#3085d6',
