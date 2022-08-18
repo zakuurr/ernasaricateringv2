@@ -34,7 +34,7 @@
               <td><span class="badge badge-danger">Belum hayar</span></td>
               <td>
                 <center>
-                  <a class="btn btn-warning" href="" ><i class="fa fa-eye"></i> Lihat detail</a>
+                  <a class="btn btn-warning" href="{{ route('pesanan.detail', $item->id) }}" ><font color="white"><i class="fa fa-eye"></i> Lihat detail</font></a>
                   <a class="btn btn-danger tombol-hapus" href=""><i class="fas fa-trash" ></i>Hapus</a>
                 </center>
               </td>

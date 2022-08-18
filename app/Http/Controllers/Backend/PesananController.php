@@ -5,6 +5,9 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Pesanan;
+use App\Models\PesananDetail;
+use App\Models\User;
+use Illuminate\Support\Carbon;
 
 class PesananController extends Controller
 {
@@ -25,9 +28,14 @@ class PesananController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function detailPrint(Request $request)
     {
-        //
+        $pesanan = Pesanan::find($request->id_pesanan);
+        $user = User::find($pesanan->user_id);
+        $detailPesan = PesananDetail::where('pesanan_id','=',$pesanan->id)->get();
+        $tanggal = Carbon::parse($pesanan->created_at)->translatedFormat('d F Y');
+
+        return view('backend/pesanan/detail-print',compact('pesanan','user','detailPesan','tanggal'));
     }
 
     /**
@@ -47,9 +55,15 @@ class PesananController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function detail($id)
     {
-        //
+        $pesanan = Pesanan::find($id);
+        $user = User::find($pesanan->user_id);
+        $detailPesan = PesananDetail::where('pesanan_id','=',$pesanan->id)->get();
+        $tanggal = Carbon::parse($pesanan->created_at)->translatedFormat('d F Y');
+
+
+        return view('backend/pesanan/detail',compact('pesanan','user','detailPesan','tanggal'));
     }
 
     /**
