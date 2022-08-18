@@ -97,6 +97,12 @@ class PesananController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $pesanan = Pesanan::find($id);
+      
+        $pesanan->delete();
+
+        session()->flash('success', 'Data berhasil dihapus');
+
+        return redirect()->back();
     }
 }

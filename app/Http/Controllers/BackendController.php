@@ -15,6 +15,12 @@ class BackendController extends Controller
      */
     public function index()
     {
-        return view('backend/dashboard');
+        $user = Auth::user();
+        if ($user->id_level == 1) {
+            return view('backend/dashboard');
+        }else{
+            return redirect()->route('home');
+        }
+        
     }
 }
