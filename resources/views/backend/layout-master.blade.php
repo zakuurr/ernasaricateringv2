@@ -206,8 +206,8 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{ route('pesanan.index') }}" class="nav-link">
-              <i class="nav-icon fas fa-dollar"></i>
+            <a href="{{ route('laporan.index') }}" class="nav-link">
+              <i class="nav-icon fas fa-book"></i>
               <p>
                 Laporan
               </p>
