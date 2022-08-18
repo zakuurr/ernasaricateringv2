@@ -79,6 +79,7 @@ History
           </li>
           <li><a href="{{url('/list-menu')}}">Daftar Menu</a></li>
           <li><a href="contact.html">Kontak Kami</a></li>
+          <li><a href="{{url('/info-loker')}}">Lowongan Kerja</a></li>
         </ul>
       </div>
     </nav>
