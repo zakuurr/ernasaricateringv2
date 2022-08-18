@@ -206,6 +206,14 @@
             </a>
           </li>
           <li class="nav-item">
+            <a href="{{ route('pesanan.index') }}" class="nav-link">
+              <i class="nav-icon fas fa-dollar"></i>
+              <p>
+                Laporan
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
             <a href="{{ route('loker.index') }}" class="nav-link">
               <i class="nav-icon fas fa-tasks"></i>
               <p>
